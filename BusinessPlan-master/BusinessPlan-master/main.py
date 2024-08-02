@@ -4,7 +4,7 @@ from agents import CustomAgents
 from tasks import CustomTasks
 
 # Set up environment variables
-os.environ["OPENAI_API_KEY"] = "YOUR API KEY"
+os.environ["OPENAI_API_KEY"] = "sk-proj-7XuthSfnz2BgolGAc7A9T3BlbkFJF4kPfNT1fkvmCZbPNUxJ"
 
 class BusinessAutomationCrew:
     def __init__(self, business_type):
@@ -14,14 +14,24 @@ class BusinessAutomationCrew:
 
     def run(self):
         agents = {
-            "market_analyst": self.agents.create_agent("Market Analyst"),
-            "marketing_strategist": self.agents.create_agent("Marketing Strategist")
+            "analista_negocios": self.agents.create_agent("Analista de Negócios"),
+            "analista_mercado": self.agents.create_agent("Analista de Mercado"),
+            "consultor_inovacao": self.agents.create_agent("Consultor de Inovação"),
+            "estrategia_financeira": self.agents.create_agent("Estratégia Financeira"),
+            "especialista_clientes": self.agents.create_agent("Especialista em Clientes"),
+            "analista_processos": self.agents.create_agent("Analista de Processos"),
+            "consultor_estrutura": self.agents.create_agent("Consultor de Estrutura")
         }
 
         tasks = {
-            "market_analysis": self.tasks.create_task(agents["market_analyst"], self.business_type, "market_analysis"),
-            "marketing_strategy": self.tasks.create_task(agents["marketing_strategist"], self.business_type, "marketing_strategy"),
-            "integration": self.tasks.create_task(agents["marketing_strategist"], self.business_type, "integration")
+            "compreensao_negocio": self.tasks.create_task(agents["analista_negocios"], self.business_type, "compreensao_negocio"),
+            "analise_mercado": self.tasks.create_task(agents["analista_mercado"], self.business_type, "analise_mercado"),
+            "ideias_inovadoras": self.tasks.create_task(agents["consultor_inovacao"], self.business_type, "ideias_inovadoras"),
+            "desenvolvimento_financeiro": self.tasks.create_task(agents["estrategia_financeira"], self.business_type, "desenvolvimento_financeiro"),
+            "desenvolvimento_clientes": self.tasks.create_task(agents["especialista_clientes"], self.business_type, "desenvolvimento_clientes"),
+            "mapeamento_processos": self.tasks.create_task(agents["analista_processos"], self.business_type, "mapeamento_processos"),
+            "desenvolvimento_estrutura": self.tasks.create_task(agents["consultor_estrutura"], self.business_type, "desenvolvimento_estrutura"),
+            "desenvolvimento_projetos": self.tasks.create_task(agents["consultor_inovacao"], self.business_type, "desenvolvimento_projetos")
         }
 
         crew = Crew(
