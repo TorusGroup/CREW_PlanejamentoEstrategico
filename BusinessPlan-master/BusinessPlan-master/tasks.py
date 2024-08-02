@@ -6,39 +6,60 @@ class CustomTasks:
 
     def create_task(self, agent, business_type, task_type):
         task_descriptions = {
-            "market_analysis": (
-                f"Conduct an in-depth market analysis for a {business_type}, focusing on understanding market size, "
-                f"identifying current trends, analyzing competitor strategies, and evaluating customer demographics. "
-                f"Assess the regulatory environment and potential barriers to entry that might affect the launch and "
-                f"sustainability of the business."
+            "compreensao_negocio": (
+                f"Compreender o negócio da empresa {business_type}, incluindo sua localização, posicionamento de marca, produtos e serviços, "
+                f"e perfil de cliente ideal. Analise o site da empresa e outros materiais disponíveis para reunir essas informações."
             ),
-            "marketing_strategy": (
-                f"Develop a detailed marketing strategy for a {business_type} using the insights gained from the "
-                f"market analysis. This strategy should outline targeted marketing channels, customer engagement plans, "
-                f"brand positioning, and promotional tactics. Include a budget forecast and expected impacts on market penetration."
+            "analise_mercado": (
+                f"Realizar uma análise de mercado detalhada para a empresa {business_type}, incluindo a busca de concorrentes, "
+                f"estimativa do tamanho do mercado, análise SWOT e análise PESTEL."
             ),
-            "integration": (
-                f"Create a comprehensive 30-day launch plan for a {business_type} that delineates daily activities, "
-                f"strategic objectives, and operational requirements. Ensure the plan includes a timeline for each phase "
-                f"of the launch, identifies key milestones, and outlines resource allocation to establish a roadmap for "
-                f"a successful market entry."
+            "ideias_inovadoras": (
+                f"Criar uma lista de ideias inovadoras e viáveis para a empresa {business_type}, para lidar com a concorrência e melhorar a posição de mercado."
+            ),
+            "desenvolvimento_financeiro": (
+                f"Desenvolver o eixo financeiro do mapa estratégico para a empresa {business_type}, alinhando os objetivos financeiros com as informações coletadas."
+            ),
+            "desenvolvimento_clientes": (
+                f"Desenvolver o eixo de clientes do mapa estratégico para a empresa {business_type}. Definir segmentos de clientes, calcular ticket médio e volume necessário, "
+                f"listar problemas e soluções para cada segmento, e definir os atributos necessários das soluções."
+            ),
+            "mapeamento_processos": (
+                f"Mapear os departamentos e processos internos necessários para a empresa {business_type} funcionar, gerando os atributos que compõem as soluções para os segmentos de clientes."
+            ),
+            "desenvolvimento_estrutura": (
+                f"Desenvolver o eixo de estrutura do mapa estratégico para a empresa {business_type}, determinando a estrutura física, equipamentos, conhecimento e tecnologia necessários para os processos internos."
+            ),
+            "desenvolvimento_projetos": (
+                f"Desenvolver projetos detalhados para a implementação de ideias inovadoras na empresa {business_type}, com pelo menos 10 ações específicas cada."
             )
         }
 
         expected_outputs = {
-            "market_analysis": (
-                f"Detailed report on the market conditions for a {business_type}, including data on market size, growth potential, "
-                f"key competitors, and customer profiles. The report should also provide actionable insights and strategic recommendations."
+            "compreensao_negocio": (
+                f"Relatório detalhado sobre o negócio da empresa {business_type}, incluindo localização, posicionamento de marca, produtos e serviços, "
+                f"e perfil de cliente ideal."
             ),
-            "marketing_strategy": (
-                f"Comprehensive marketing playbook for a {business_type}, detailing all marketing efforts, channel strategies, "
-                f"and communication plans along with a schedule and projected outcomes. The playbook should align with the business's "
-                f"overall objectives and customer acquisition targets."
+            "analise_mercado": (
+                f"Relatório detalhado de análise de mercado para a empresa {business_type}, incluindo informações sobre concorrentes, tamanho do mercado, análise SWOT e análise PESTEL."
             ),
-            "integration": (
-                f"A fully articulated 30-day launch plan for a {business_type} with clear action items, responsibilities, "
-                f"and checkpoints. The plan should cover all necessary preparations for the business to commence operations "
-                f"smoothly and achieve early traction."
+            "ideias_inovadoras": (
+                f"Lista de ideias inovadoras e viáveis para a empresa {business_type}, com descrição detalhada de cada ideia."
+            ),
+            "desenvolvimento_financeiro": (
+                f"Eixo financeiro do mapa estratégico para a empresa {business_type}, com objetivos financeiros detalhados."
+            ),
+            "desenvolvimento_clientes": (
+                f"Eixo de clientes do mapa estratégico para a empresa {business_type}, incluindo definição de segmentos de clientes, ticket médio e volume necessário, problemas e soluções para cada segmento, e atributos necessários das soluções."
+            ),
+            "mapeamento_processos": (
+                f"Mapa de processos internos da empresa {business_type}, detalhando os departamentos e processos necessários para gerar os atributos das soluções."
+            ),
+            "desenvolvimento_estrutura": (
+                f"Eixo de estrutura do mapa estratégico para a empresa {business_type}, detalhando a estrutura física, equipamentos, conhecimento e tecnologia necessários."
+            ),
+            "desenvolvimento_projetos": (
+                f"Projetos detalhados para a implementação de ideias inovadoras na empresa {business_type}, com pelo menos 10 ações específicas cada."
             )
         }
 
