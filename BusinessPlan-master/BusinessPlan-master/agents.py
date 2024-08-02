@@ -1,5 +1,5 @@
 from crewai import Agent
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, ScrapeWebsiteTool
 
 class CustomAgents:
     def __init__(self):
